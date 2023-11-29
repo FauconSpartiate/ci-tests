@@ -1,0 +1,17 @@
+name: test
+
+on:
+  workflow_dispatch:
+  workflow_call:
+  release:
+    types:
+      - created
+      - edited
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print hello world
+        run: echo "Hello world!"
